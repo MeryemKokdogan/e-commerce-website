@@ -2,7 +2,13 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+/* buttonlar:
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Source Code Pro', monospace;
+	
+	başlıklar:
+	font-family: 'Oswald', sans-serif;
+	*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -30,6 +36,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    box-sizing: border-box;
 }
 ol, ul {
 	list-style: none;
@@ -46,3 +53,31 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+button{
+	background-color: #eebbc3;
+	color: #232946;
+}
+p{
+	color: #b8c1ec;
+}
+a{
+	text-decoration: none;
+}
+main{
+	position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+.mobile-menu{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-around;
+}
+.sidebar.active ~ .home-content{
+    width: calc(100% - 268px);
+    left: 268px;
+
+}
+
