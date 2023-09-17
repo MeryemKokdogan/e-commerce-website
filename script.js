@@ -1,7 +1,13 @@
-let mobileMenuButton = document.querySelector("#mobile-menu-btn");
+let hamburger = document.querySelector(".hamburger");
+let navMenu = document.querySelector(".nav-menu");
 
-let mobileMenu = document.querySelector(".mobile-menu");
+hamburger.addEventListener("click", ()=>{
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
 
-mobileMenuButton.onclick = function(){
-    mobileMenu.classList.toggle("active");
-}
+document.querySelectorAll(".nav-link").forEach(n =>
+    n.addEventListener("click", ()=>{
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }))
