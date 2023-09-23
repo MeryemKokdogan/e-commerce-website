@@ -19,13 +19,14 @@ header{
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px;
+	padding: 20px 50px;
 }
-.nav-menu>li{
+.nav-menu , .cart-menu>li{
 	list-style: none;
 }
 .nav-link{
 	text-decoration: none;
+	font-size: 1.2rem;
 	color: #232946;
 	transition: 0.7s ease;
 }
@@ -42,16 +43,7 @@ header{
 .nav-menu{
 	display: flex;
 	justify-content: space-around;
-	align-items: center;
-	gap: 16px;
-}
-.bx-cart{
-	font-size: 2rem;
-}
-.logo{
-	font-size: 2rem;
-	color: #232946;
-	text-decoration: none;
+	gap: 50px;
 }
 .hamburger{
 	display: none;
@@ -66,9 +58,22 @@ header{
 	-webkit-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
+.bx-cart{
+	font-size: 2rem;
+	cursor: pointer;
+}
+.logo{
+	font-size: 2rem;
+	color: #232946;
+	text-decoration: none;
+}
 
-@media (max-width:768px) {
+
+@media (max-width:770px) {
 	
+	header{
+		justify-content: space-between;
+	}
 	.hamburger{
 		display: block;
 
@@ -93,6 +98,7 @@ header{
 		width: 100%;
 		text-align: center;
 		transition: 0.3s ;
+		flex: 1;
 	}
 	.nav-menu>li{
 		margin:16px 0;
@@ -103,17 +109,10 @@ header{
 	.nav-link{
 		color: white;
 	}
-	.bx-cart{
-		position: absolute;
-
+	.logo{
+		position:fixed;
+		left: 41%;
 	}
-
-
-
-
-
-
-
 
 }
 
